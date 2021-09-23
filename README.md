@@ -17,3 +17,49 @@ collection for linux tools and useful skills
 -l 仅列出在Listen(监听)的服务状态
 -p 显示建立相关链接的程序名
 ```
+## shell版99乘法表
+```
+for i in `seq 9`
+do
+    for j in `seq $i`
+    do
+        echo -n "$i*$j=$[i*j]"
+    done
+    echo
+done
+```
+
+## 和电脑猜拳
+```
+game=(石头 剪刀 布)
+num=$[RANDOM%3]
+computer=${game[$num]}
+#随机生成出拳可能并存入数组game[$num]:game[0],game[1],game[2]分别代表石头,剪刀,布
+echo "请根据以下提示选择出拳手势"
+echo "石头:1 剪刀:2 布:3"
+read -p "请出拳:(1,2,3)": person
+case $person in
+1)
+ if [ $num -eq 0 ];then
+  echo "平局"
+ elif [ $num -eq 1 ];then
+  echo "你赢"
+ else
+  echo "计算机赢"
+ fi;;
+2)
+ if [ $num -eq 0 ];then
+  echo "计算机赢"
+ elif [ $num -eq 1 ];then
+  echo "平局"
+ else
+  echo "你赢"
+ fi;;
+3)
+ if [ $num -eq 0 ];then
+  echo "你赢"
+ elif [ $num -eq 1 ];then
+  echo "计算机赢"
+ else
+  echo "平局"
+```
