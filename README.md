@@ -18,7 +18,7 @@ collection for linux tools and useful skills
 -p 显示建立相关链接的程序名
 ```
 ## shell版99乘法表
-```
+```bash
 for i in `seq 9`
 do
     for j in `seq $i`
@@ -30,7 +30,7 @@ done
 ```
 
 ## 和电脑猜拳
-```
+```bash
 game=(石头 剪刀 布)
 num=$[RANDOM%3]
 computer=${game[$num]}
