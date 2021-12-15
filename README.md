@@ -63,3 +63,8 @@ case $person in
  else
   echo "平局"
 ```
+
+# openbullet2
+```
+docker run --name openbullet2 --rm -p 8069:5000 -v /root/openbullet2:/app/UserData/ -it openbullet/openbullet2:latest
+```
